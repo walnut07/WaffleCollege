@@ -4,6 +4,7 @@
     --pink: #F15757;
     --blue: #1B92D6;
     --black: #484747;
+    --purple: #956daf;
     --white: #F2F2F2;
     --yellow: #EEF14E;
 }
@@ -83,7 +84,7 @@ header{
 /* highschool */
 
 .highschool{
-    background-color:var(--black);
+    background:var(--purple);
     position: relative;
 }
 
@@ -91,33 +92,33 @@ header{
   margin-top: 50px;
   text-align: center;
   color: var(--white);
-  text-shadow: 2px 2px var(--blue);
 }
 
 .highschool-container{
     display: flex;
     flex-direction: row;
     padding: 50px;
+    padding-bottom: 0; 
 }
 
 .highschool-container img{
-  width: 30vw;
+  width: 26vw;
   box-shadow:
-  10px 10px 0 #FFF, /*外側の縁取り*/
+  10px 10px 0 var(--pink), /*外側の縁取り*/
   -10px 10px 0 #FFF, -10px -10px 0 #FFF,
-  -10px 10px 0 #FFF,  10px -10px 0 #FFF,
-  -10px 0 0 #FFF, 10px 0 0 #FFF;
+  -10px 10px 0 var(--pink),  10px -10px 0 var(--pink),
+  -10px 0 0 var(--pink), 10px 0 0 var(--pink);
 }
 
 
 .hs-text{
   color: var(--white);
   width: 550px;
-  padding: 30px;
-  text-shadow: 
+  padding: 40px;
+  /* text-shadow: 
   -1px 1px 0 #000, 1px -1px 0 #000,
   0px 1px 0 #000,  0-1px 0 #000,
-  -1px 0 0 #000, 1px 0 0 #000;
+  -1px 0 0 #000, 1px 0 0 #000; */
 }
 
 /* college */
@@ -155,6 +156,10 @@ header{
   color: var(--black);
 }
 
+.highlight{
+  background:linear-gradient(transparent 50%, var(--yellow) 50%);
+}
+
 .college-picture img{
   width: 400px;
   margin-top: -100px;
@@ -170,7 +175,7 @@ header{
   padding-bottom: calc(10vw + 10px);  
   position: relative;
   overflow: hidden;
-  background-color:var(--black);} /* .section1の背景 */ 
+  background-color:var(--purple);} /* .section1の背景 */ 
 
 .highschool::before {
   content: '';
@@ -206,6 +211,11 @@ header{
   margin: 50px;
   text-align: center;
   color: var(--white);
+  text-shadow:
+  1px 1px 0 var(--pink), /*外側の縁取り*/
+  -1px 1px 0 var(--pink), -1px -1px 0 var(--pink),
+  -1px 1px 0 var(--pink),  1px -1px 0 var(--pink),
+  -1px 0 0 var(--pink), 1px 0 0 var(--pink);
 }
 .year-off-container{
   width:900px ;
@@ -262,4 +272,5 @@ footer{
   padding: 50px;
   color: var(--white);
   text-align: center;
+  font-size: 13px;
 }
