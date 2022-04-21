@@ -31,9 +31,10 @@ header{
 
 .intro-pink-background{
     position: absolute;
-    width: 90%;
+    width: 100%;
     height: 100vh;
-    background: var(--pink); 
+    background: rgb(241,122,87);
+    background: linear-gradient(90deg, rgba(241,122,87,1) 75%, rgba(162,127,184,1) 94%);
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -74,21 +75,22 @@ header{
   filter: drop-shadow(15px 15px var(--yellow));
 }
 
+/*
 .intro-blue-background{
     width: 100%;
     height: 100vh;
-    background: var(--purple);
+    background: #A380B9;
     z-index: -1;
     display: flex;
     margin-right: 0;
 
-}
+} */
 
 /* highschool */
 
 .highschool{
-    background:var(--purple);
-    position: relative;
+  background-image: linear-gradient(to left bottom, #a380b9, #a07bb7, #9c76b4, #9972b2, #956daf);
+  position: relative;
 }
 
 .highschool h2{
@@ -174,19 +176,19 @@ header{
   margin-left: 20px;
 }
 
-/* 背景をななめにする　*/
+/* 背景に斜めの線を入れる　*/
 .highschool{ 
   padding-bottom: calc(10vw + 10px);  
   position: relative;
   overflow: hidden;
-  background-color:var(--purple);} /* .section1の背景 */ 
+  background-color:var(--purple);} /* .section: collegeの背景 */ 
 
 .highschool::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  border-bottom: 10vw solid var(--white);  /* 三角をグレーにする */ 
+  border-bottom: 10vw solid var(--white);  /* 三角を白にする */ 
   border-left: 100vw solid transparent;
 }
 
@@ -201,14 +203,14 @@ header{
   position: absolute;
   bottom: 0;
   left: 0;
-  border-bottom: 10vw solid var(--blue);  /* 三角を白にする */ 
+  border-bottom: 10vw solid #309DDA;  /* 三角を白にする */ 
   border-left: 100vw solid transparent;
 }
 
 /* year-off */
 
 .year-off{
-    background-color: var(--blue);
+  background-image: linear-gradient(to top, #1b93d6, #2196d7, #2698d8, #2b9bd9, #309dda);
 }
 
 .year-off-title h2{
@@ -268,7 +270,6 @@ li {
 .year-off-picture img{
     width: 100%;
 }
-
 
 /* footer */
 footer{
