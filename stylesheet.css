@@ -103,13 +103,17 @@ header{
     padding-bottom: 0; 
 }
 
-.highschool-container img{
+.guitar-pic{
+  /* will fade in on scroll */
   width: 26vw;
-  /*box-shadow:
-  10px 10px 0 #FFF, /*外側の縁取り
-  -10px 10px 0 #FFF, -10px -10px 0 #FFF,
-  -10px 10px 0 #FFF,  10px -10px 0 #FFF,
-  -10px 0 0 #FFF, 10px 0 0 #FFF; */
+  opacity: 0;
+  transform:translateX(-100px);
+  transition:opacity 1s,transform 1s;
+}
+
+.guitar-fadein-after {
+  opacity: 1;
+  transform: translate(0);
 }
 
 
@@ -171,6 +175,8 @@ header{
 #text-left{
   margin-top: 250px;
   margin-left: 20px;
+  transform:translateX(500px);
+  transition:opacity 1s,transform 1s;
 }
 
 /* 背景に斜めの線を入れる　*/

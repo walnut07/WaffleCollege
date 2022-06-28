@@ -16,3 +16,20 @@ const restoreOriginalMyPicBackground = () => {
 }
 introPicture.addEventListener("mouseover", changeMyPicBackground);
 introPicture.addEventListener("mouseleave", restoreOriginalMyPicBackground);
+
+
+// The high school pic fades in on scroll
+const guitarPic = document.getElementsByClassName("guitar-pic")[0];
+const fadeInGuitarPic = () => {
+  const guitarPicTop = guitarPic.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  if (windowHeight > (guitarPicTop + 100)) {
+    guitarPic.classList.add("guitar-fadein-after");
+  } else {
+    guitarPic.classList.remove("guitar-fadein-after");
+  }
+};
+window.addEventListener("scroll", fadeInGuitarPic);
+
+// The left text in college part fades in on scroll
+
