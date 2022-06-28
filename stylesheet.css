@@ -52,6 +52,8 @@ header{
   -1px 1px 0 #FFF, 1px -1px 0 #FFF,
   0px 1px 0 #FFF,  0 -1px 0 #FFF,
   -1px 0 0 #FFF, 1px 0 0 #FFF;
+  transform:translateX(-500px);
+  transition:opacity 1s,transform 0.4s;
 }
 
 .intro-text p{
@@ -62,6 +64,14 @@ header{
   0px 1px 0 var(--purple),  0 -1px 0 var(--purple),
   -1px 0 0 var(--purple), 1px 0 0 var(--purple);
   text-indent: 0em;
+  transition: all 1.3s;
+  opacity: 0;
+}
+
+@keyframes adjustOpacity{
+  100%{
+      opacity: 1;
+  }
 }
 
 .intro-picture {
@@ -70,6 +80,7 @@ header{
     bottom: -90px;
     position: relative;
     filter: drop-shadow(15px 15px var(--yellow));
+    cursor: pointer;
 }
 
 /*

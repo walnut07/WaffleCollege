@@ -1,6 +1,20 @@
 const styleSheetList = document.styleSheets;
 const styleSheet = styleSheetList[0];
 
+// Intro h1 fades in when loaded
+const introH1 = document.getElementsByClassName("intro-h1")[0];
+const fadeInIntroH1 = () => {
+  introH1.style.transform = "translateX(0px)"
+}
+window.addEventListener("load", () => { setTimeout(fadeInIntroH1, 600) });
+
+// Intro p apears when loaded
+const introP = document.getElementsByClassName("intro-p")[0];
+const fadeInIntroP = () => {
+  introP.style.opacity = "1";
+}
+window.addEventListener("load", () => { setTimeout(fadeInIntroP, 2000) });
+
 // Change its background color when my picture is hovered.
 const introPicture = document.getElementsByClassName("intro-picture")[0];
 const getRandomColor = () => {
