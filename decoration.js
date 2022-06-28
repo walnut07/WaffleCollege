@@ -45,39 +45,44 @@ const fadeInGuitarPic = () => {
 };
 window.addEventListener("scroll", fadeInGuitarPic);
 
-// A module that fades in and out a target element.
-const fadeInAndOut = (target, isLeft) => {
+// A module that fades in and out a target elem.
+const fadeInAndOut = (target, position) => {
+  // `target`: elem that you want to apply an effect to.
+  // `position`: in which position `target` is in: left, right, or center.
+
   const windowHeight = window.innerHeight;
   const targetHeight = target.getBoundingClientRect().top;
-  if (isLeft) {
+  if (position == "left") {
     if (windowHeight > (targetHeight + 200)) {
-      // intentionally do not add classList here because `rightText` has nested p tags.
+      // intentionally do not add classList here because `target` has nested p tags.
       target.style.opacity = "1";
       target.style.transform = "translate(0)";
     } else {
       target.style.transform = "translateX(-400px)";
       target.style.transition = "opacity 1s, transform 1s";
     }
-  }
-  else {
+  } else if (position == "right") {
     if (windowHeight > (targetHeight + 200)) {
-      // intentionally do not add classList here because `rightText` has nested p tags.
       target.style.opacity = "1";
       target.style.transform = "translate(0)";
     } else {
-  
       target.style.transform = "translateX(400px)";
       target.style.transition = "opacity 1s, transform 1s";
     }
+  } else {
+    if (windowHeight > (targetHeight + 200)) {
+      target.style.opacity = "1";
+    } else {
+      target.style.opacity = "0";
+    }
   }
-
 }
 
 // The left text in college part fades in on scroll
 const leftText = document.getElementsByClassName("college-text")[0];
 const fadeInLeftText = () => {
   const leftTextTop = leftText.getBoundingClientRect().top;
-  fadeInAndOut(leftText, true);
+  fadeInAndOut(leftText, "left");
 }
 window.addEventListener("scroll", fadeInLeftText);
 
@@ -85,7 +90,14 @@ window.addEventListener("scroll", fadeInLeftText);
 // The right text in college part fades in on scroll
 const fadeInRightText = () => {
   const rightText= document.getElementById("text-right");
-  fadeInAndOut(rightText, false);
+  fadeInAndOut(rightText, "right");
   
 }
 window.addEventListener("scroll", fadeInRightText);
+
+// The year-off h2 fades in on scroll
+const yearOffH2 = document.getElementsByClassName("year-off-h2")[0];
+const fadeInYearOffH2 = () => {
+  fadeInAndOut(yearOffH2, "center");
+}
+window.addEventListener("scroll", fadeInYearOffH2);

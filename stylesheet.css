@@ -238,10 +238,12 @@ header{
   text-align: center;
   color: var(--white);
   text-shadow:
-  1px 1px 0 var(--pink), /*外側の縁取り*/
+  1px 1px 0 var(--pink), /* Pink lines on the edges */
   -1px 1px 0 var(--pink), -1px -1px 0 var(--pink),
   -1px 1px 0 var(--pink),  1px -1px 0 var(--pink),
   -1px 0 0 var(--pink), 1px 0 0 var(--pink);
+  transition: all 1.5s;
+  opacity: 0;
 }
 .year-off-container{
   width:900px ;
