@@ -69,10 +69,7 @@ header{
     right: 0px;
     bottom: -90px;
     position: relative;
-}
-
-.intro-pink-background img{
-  filter: drop-shadow(15px 15px var(--yellow));
+    filter: drop-shadow(15px 15px var(--yellow));
 }
 
 /*
@@ -108,8 +105,8 @@ header{
 
 .highschool-container img{
   width: 26vw;
-  box-shadow:
-  /* 10px 10px 0 #FFF, /*外側の縁取り
+  /*box-shadow:
+  10px 10px 0 #FFF, /*外側の縁取り
   -10px 10px 0 #FFF, -10px -10px 0 #FFF,
   -10px 10px 0 #FFF,  10px -10px 0 #FFF,
   -10px 0 0 #FFF, 10px 0 0 #FFF; */
